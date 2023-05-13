@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply selection:bg-accent selection:text-accent-content;
+  }
+  footer * svg {
+    @apply h-8 w-8;
+    fill: currentColor;
+    stroke: none;
+  }
+}
+
+@layer components {
+  .dropdown > label {
+    @apply btn btn-square btn-ghost mb-2 hover:ring-2 hover:ring-primary;
+  }
+
+  .dropdown > label > svg {
+    @apply h-6 w-6;
+  }
+
+  .dropdown-content {
+    @apply w-52 p-2 space-y-2 rounded-box border-none menu menu-compact bg-base-200 hover:ring-2 hover:ring-primary shadow-2xl;
+  }
+
+  .menu-title {
+    @apply capitalize;
+  }
+
+  .dropdown > ul > li * svg {
+    @apply h-4 w-4;
+  }
+
+  .dropdown > ul > li * button {
+    @apply overflow-hidden rounded-box w-full;
+  }
+  .dropdown > ul > li > a {
+    @apply rounded-md;
+  }
+}
+
+@layer utilities {
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
