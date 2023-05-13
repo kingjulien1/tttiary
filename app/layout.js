@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function Root({ children }) {
   return (
-    <html lang="en" className="m-0">
+    <html lang="en" className="m-0 scrollbar-hide">
       <body>
         <Providers>
           <main className="min-h-screen flex flex-col">
