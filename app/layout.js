@@ -20,7 +20,7 @@ export default function Root({ children }) {
     <html lang="en" className="m-0">
       <body>
         <Providers>
-          <main className="min-h-screen">
+          <main className="min-h-screen flex flex-col">
             <Navbar links={group(links.navbar, "group")} />
             {children}
           </main>
@@ -38,8 +38,8 @@ export default function Root({ children }) {
  */
 function Navbar({ links }) {
   return (
-    <div className="sticky top-0 z-30 py-2 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100">
-      <nav className="py-2 md:px-4 navbar sticky">
+    <div className="absolute top-0 z-30 py-2 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100">
+      <nav className="py-2 md:px-4 navbar">
         <div className="navbar-start">
           <Dropdown className="dropdown-bottom dropdown-start">
             <Dropdown.Button children={<Icon shape="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />} />
