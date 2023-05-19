@@ -63,7 +63,7 @@ function Navbar({ links }) {
  */
 function Footer({ links }) {
   return (
-    <footer className="p-10 footer bg-base-200">
+    <footer className="px-10 py-20 footer bg-base-200">
       <div>
         <Image height={50} width={50} src="/skull.png" alt="logo" />
         <div className="pt-4">
